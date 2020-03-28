@@ -7,10 +7,13 @@ let newCount = document.getElementById("counter");
 let changedNumber = document.querySelector("input");
 
 //set click event listeners
-document.getElementById("plus").onclick = addNumber();
-document.getElementById("minus").onclick = subtractNumber();
+document.getElementById("plus").addEventListener("click", addNumber);
+document.getElementById("minus").addEventListener("click", subtractNumber);
 
 function render(){
+    if(currentCount < 0){
+        document.getElementById("counter").style.color = "#ff0000"
+    } else document.getElementById("counter").style.color = "#000000"
     newCount.innerHTML = currentCount;
 }
 function init() { 
