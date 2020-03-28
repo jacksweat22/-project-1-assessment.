@@ -16,6 +16,8 @@ body{
 }
 
 .button1{
+
+    color:white;
     font-size: 50px;
     height: 100px;
     width: 100px;
@@ -23,6 +25,7 @@ body{
     background-color: lightgray;
 }
 .button2{
+    color: white;
     font-size: 50px;
     height: 100px;
     width: 100px;
@@ -30,7 +33,14 @@ body{
     background-color: lightgray;
 
 }
-
+.button1:hover{
+    background-color: white;
+    color: lightgray;
+}
+.button2:hover{
+    background-color: white;
+    color: lightgray;
+}
 input{
     margin-left: 15px;
     margin-right: 15px;
