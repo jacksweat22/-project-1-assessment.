@@ -4,20 +4,21 @@
 let currentCount;
 //select the changing elements on html using js
 let newCount = document.getElementById("counter");
-let changedNumber = document.querySelector("num");
+let changedNumber = document.querySelector("input");
 
 //set click event listeners
-document.getElementById("add").onclick = addNumber();
-document.getElementById("sub").onclick = subtractNumber();
-
-function init() { 
-    changedNumber.value = 1;
-    currentCount = 0;
-}
+document.getElementById("plus").onclick = addNumber();
+document.getElementById("minus").onclick = subtractNumber();
 
 function render(){
     newCount.innerHTML = currentCount;
 }
+function init() { 
+    changedNumber.value = 1;
+    currentCount = 0;
+    render();
+}
+
 function addNumber() {
     currentCount = currentCount +  Math.floor(changedNumber.value);
     render();
